@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const { spawn } = require("child_process");
 
 const validate = ({ username, password, email }) => {
