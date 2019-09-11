@@ -1,0 +1,11 @@
+{
+  "name": "npm-ci-login",
+  "version": "1.0.0",
+  "description": "Logs into NPM on your CI machines",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vedad Sose <vedadsose@gmail.com>",
+  "license": "ISC"
+}
