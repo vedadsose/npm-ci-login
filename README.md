@@ -1,13 +1,21 @@
 # NPM CI Login
 
-Logs you into NPM on CI machines.
+Logs you to an NPM registry on CI machines, uses `npm login` in the background.
 
-Usage:
+### Usage:
 ```
-NPM_USERNAME=Snoop NPM_PASSWORD=Dogg NPM_EMAIL=snoop@420.com npm-ci-login
+NPM_USERNAME=Snoop \
+NPM_PASSWORD=Dogg \
+NPM_EMAIL=snoop@420.com \
+npm-ci-login
 ```
 
-The tool also supports:
+### Supported environment variables:
 
-`NPM_REGISTRY` - If you have a custom registry
-`NPM_SCOPE` - Organisation scope 
+| Name           | Description                                                     | Required |
+| -------------- | --------------------------------------------------------------- | -------- |
+| `NPM_USERNAME` | Username on the registry                                        | yes      |
+| `NPM_PASSWORD` | Password for the user (or token on some registries like Github) | yes      |
+| `NPM_EMAIL`    | Email for the user                                              | yes      |
+| `NPM_REGISTRY` | Registry url - if you have a custom registry                    | no       |
+| `NPM_SCOPE`    | Organisation scope                                              | no       |
