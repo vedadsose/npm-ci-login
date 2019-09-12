@@ -4,6 +4,8 @@ Logs you to an NPM registry on CI machines, uses `npm login` in the background.
 
 ### Usage:
 ```
+npm install -g npm-ci-login
+
 NPM_USERNAME=Snoop \
 NPM_PASSWORD=Dogg \
 NPM_EMAIL=snoop@420.com \
