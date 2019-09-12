@@ -8,12 +8,12 @@ const validate = ({ username, password, email }) => {
   }
 
   if (!password) {
-    console.log("Please provide password via NPM_USERNAME");
+    console.log("Please provide password via NPM_PASSWORD");
     process.exit(1);
   }
 
   if (!email) {
-    console.log("Please provide email via NPM_USERNAME");
+    console.log("Please provide email via NPM_EMAIL");
     process.exit(1);
   }
 };
