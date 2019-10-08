@@ -1,12 +1,13 @@
 {
   "name": "npm-ci-login",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "Logs into NPM on your CI machines",
   "bin": "index.js",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": "git://github.com/vedadsose/npm-ci-login.git",
   "author": "Vedad Sose <vedadsose@gmail.com>",
   "license": "ISC"
 }
