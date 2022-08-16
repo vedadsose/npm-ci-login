@@ -32,12 +32,21 @@ const login = props => {
     ].filter(Boolean)
   );
 
+  let consoleOutput = '';
   npmLogin.stderr.on("data", data => {
-    console.log("Error: ", data.toString("utf-8"));
-    process.exit(1);
+    consoleOutput += data.toString("utf-8");
   });
 
-  npmLogin.on("close", () => process.exit(0));
+  npmLogin.on("close", () => {
+    if(/ERR!/.test(consoleOutput)) {
+      console.error(`User ${username} could not login to npm registry ${registry}`);
+      console.error(consoleOutput)
+      process.exit(1);
+    } else {
+      console.info(`User ${username} successfully logged into the npm registry ${registry}`);
+      process.exit(0);
+    }
+  });
 
   npmLogin.stdin.write(username + "\n");
   setTimeout(() => {
